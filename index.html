@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Презентация</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: sans-serif; background: #f0f2f5; display: flex; flex-direction: column; align-items: center; padding: 20px; }
+        .slide { background: white; width: 100%; max-width: 850px; min-height: 500px; margin-bottom: 30px; padding: 40px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-radius: 8px; position: relative; border-top: 5px solid #5a5a5a; }
+        h1, h2 { color: #2c3e50; border-bottom: 1px solid #eee; }
+        .boxed { border: 1px solid #333; padding: 15px; margin: 10px 0; background: #fafafa; }
+        .slide-number { position: absolute; bottom: 15px; right: 20px; font-size: 0.8em; color: #999; }
+        img { max-width: 100%; height: auto; display: block; margin: 10px auto; }
+        .columns { display: flex; gap: 20px; }
+        .col { flex: 1; }
+    </style>
+</head>
+<body>
+    <div class="slide" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; min-height: 500px;">
+        
+        <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
+            <h1 style="font-size: 1.9em; margin-bottom: 40px; line-height: 1.3; max-width: 800px; color: #1a2a3a;">
+                Свойства распределений автокорреляторов в системах связанных осцилляторов с невзаимнымм взаимодействиями при стохастическом возбуждении.
+            </h1>
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 1.3em; font-weight: bold; margin-bottom: 8px; color: #333;">А.Ю. Шахматов, Д.А. Колотинский</p>
+                <p style="font-size: 1.05em; color: #5a5a5a;">Московский физико-технический институт</p>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 40px; width: 85%;">
+            <div style="border-top: 1px solid #eee; padding-top: 20px;">
+                <p style="font-size: 1.1em; color: #2c3e50; font-weight: 500; letter-spacing: 0.5px;">
+                    68-я Всероссийская научная конференция МФТИ
+                </p>
+            </div>
+        </div>
+
+        <div class="slide-number">1</div>
+    </div>
+
+    <div class="slide">
+        <h2>Модель системы</h2>
+        
+        <div class="boxed" style="text-align: center;">
+            \[ \mathbf{A} \frac{d^2\mathbf{q}}{dt^2} + \gamma \frac{d\mathbf{q}}{dt} + \mathbf{C} \mathbf{q} = \boldsymbol{\eta}(t), \qquad \mathbf{A} \neq \mathbf{A}^T \text{ или/и } \mathbf{C} \neq \mathbf{C}^T \]
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 35px; align-items: start;">
+            
+            <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                <div style="width: 100%; height: 140px; border: 1px solid #eee; background: #fafafa; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 4px;">
+                    <img src="mechanics_ex.png" alt="[1]" style="max-width: 95%; max-height: 95%; width: auto; height: auto; object-fit: contain;"> 
+                </div>
+                <p style="font-size: 0.75em; color: #7f8c8d; margin-top: 8px; line-height: 1.2; max-width: 90%;">[1] Ghatak A. et al. Observation of non-Hermitian topology and its bulk–edge correspondence in an active mechanical metamaterial</p>
+            </div>
+
+            <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                <div style="width: 100%; height: 140px; border: 1px solid #eee; background: #fafafa; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 4px;">
+                    <img src="optics_ex.png" alt="[2]" style="max-width: 95%; max-height: 95%; width: auto; height: auto; object-fit: contain;">
+                </div>
+                <p style="font-size: 0.75em; color: #7f8c8d; margin-top: 8px; line-height: 1.2; max-width: 90%;">[2] Yu X. et al. Hermitian and non-Hermitian normal-mode splitting in an optically-levitated nanoparticle</p>
+            </div>
+
+            <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                <div style="width: 100%; height: 140px; border: 1px solid #eee; background: #fafafa; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 4px;">
+                    <img src="plasma_ex.png" alt="[3]" style="max-width: 95%; max-height: 95%; width: auto; height: auto; object-fit: contain;">
+                </div>
+                <p style="font-size: 0.75em; color: #7f8c8d; margin-top: 8px; line-height: 1.2; max-width: 90%;">[3] Ivlev A. V. et al. Statistical mechanics where Newton’s third law is broken</p>
+            </div>
+
+            <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                <div style="width: 100%; height: 140px; border: 1px solid #eee; background: #fafafa; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 4px;">
+                    <img src="top_ex.png" alt="[4]" style="max-width: 95%; max-height: 95%; width: auto; height: auto; object-fit: contain;">
+                </div>
+                <p style="font-size: 0.75em; color: #7f8c8d; margin-top: 8px; line-height: 1.2; max-width: 90%;">[4] Yuan H. et al. Non‐Hermitian topolectrical circuit sensor with high sensitivity</p>
+            </div>
+
+        </div>
+
+        <div class="slide-number">2</div>
+    </div>
+
+    <div class="slide">
+        <h2>Неприменимость теоремы о равнораспределении кинетической энергии</h2>
+        
+        <div style="text-align: center; margin-bottom: 30px;">
+            <div class="boxed" style="display: inline-block; padding: 15px 30px; font-size: 1.2em;">
+                \[ \langle \dot{q}_i^2 \rangle \neq \frac{1}{2} k_{\text{B}} T \]
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start;">
+            
+            <div style="text-align: center;">
+                <div style="width: 100%; height: 250px; background: #fafafa; border: 1px solid #eee; display: flex; align-items: center; justify-content: center; border-radius: 4px; overflow: hidden;">
+                    <img src="distribution_plot.png" alt="График распределения" style="max-width: 95%; max-height: 95%; object-fit: contain;">
+                </div>
+                <p style="font-size: 0.8em; color: #7f8c8d; margin-top: 10px;">Распределение скоростей в несимметричной системе</p>
+            </div>
+
+            <div style="text-align: center;">
+                <div style="width: 100%; height: 250px; background: #fafafa; border: 1px solid #eee; display: flex; align-items: center; justify-content: center; border-radius: 4px; overflow: hidden;">
+                    <img src="dusty_experiment.gif" alt="Анимация осцилляторов" style="max-width: 95%; max-height: 95%; object-fit: contain;">
+                </div>
+                <p style="font-size: 0.8em; color: #7f8c8d; margin-top: 10px;">[5] Hariprasad M. G. et al. Self-sustained non-equilibrium co-existence of fluid and solid states in a strongly coupled complex plasma system</p>
+            </div>
+
+        </div>
+
+        <div class="slide-number">3</div>
+    </div>
+
+    <div class="slide" style="height: 600px; display: flex; flex-direction: column; overflow: hidden;">
+        <h2 style="margin: 0; padding: 10px 0; font-size: 1.5em; flex-shrink: 0;">
+            Спектральное поведение систем с асимметричными взаимодействиями
+        </h2>
+        
+        <div style="flex-grow: 1; width: 100%; min-height: 0; margin-bottom: 20px;">
+            <iframe src="my_oscillator_model.html" 
+                    width="100%" 
+                    height="100%" 
+                    frameborder="0" 
+                    scrolling="no" 
+                    style="display: block; border: 1px solid #f0f0f0;">
+            </iframe>
+        </div>
+
+        <div class="slide-number">4</div>
+    </div>
+
+    <div class="slide">
+        <h2>Основной результат</h2>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <div class="boxed" style="display: inline-block; padding: 15px 30px; background: #fcfcfc;">
+                \[
+                \mathbf{A}(\Omega) \frac{d^2 \mathbf{q}}{dt^2} + \gamma \frac{d \mathbf{q}}{dt} + \mathbf{C}(\Omega) \mathbf{q} = \boldsymbol{\eta}(t)
+                \]
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 15px 0; font-size: 2em; color: #34495e;">
+            \(\Downarrow\)
+        </div>
+
+        <div style="text-align: center;">
+            <div class="boxed" style="display: inline-block; padding: 20px 40px; background: #fffdf5; border-color: #f1c40f;">
+                <div style="font-size: 1.1em; line-height: 2.2;">
+                    \[
+                    \begin{aligned}
+                        \langle q_i^2 \rangle &\sim \frac{M_1}{\gamma^2 + M_1 \Omega} v_i^2 + O(1), \quad \Omega \to 0 \\
+                        \langle \dot{q}_i^2 \rangle &\sim \frac{M_2}{\gamma^2 + M_2 \Omega} v_i^2 + O(1), \quad \Omega \to 0
+                    \end{aligned}
+                    \]
+                </div>
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+                <p style="font-size: 0.85em; color: #555; margin: 0;">
+                    Где \(M_1, M_2\) — константы, 
+                    \(\mathbf{v}\) — собственный вектор в особой точке (ОТ),
+                    \(\Omega\) — расстояние до особой точки системы
+                </p>
+            </div>
+        </div>
+
+        <div class="slide-number">5</div>
+    </div>
+    
+   <div class="slide">
+        <h2>Квазиодномерная цепочка пылевых частиц</h2>
+
+        <div style="text-align: center; margin-top: 10px; margin-bottom: 20px;">
+            <div class="boxed" style="display: inline-block; padding: 10px 25px; font-size: 0.9em; background: #fafafa;">
+                \[ \mathbf{M} \frac{d^2 \mathbf{x}}{dt^2} + \gamma \frac{d \mathbf{x}}{dt} + \mathbf{A} \mathbf{x} = \sqrt{2kT \gamma} \boldsymbol{\eta} (t) \]
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start;">
+            
+            <div style="text-align: center;">
+                <div style="width: 100%; height: 320px; background: #fff; border: 1px solid #eee; display: flex; align-items: center; justify-content: center; border-radius: 8px; overflow: hidden;">
+                    <img src="dust_chain_static.png" alt="Схема" style="max-width: 98%; max-height: 98%; object-fit: contain;">
+                </div>
+                <p style="font-size: 0.8em; color: #5a5a5a; margin-top: 10px;">Цепочка пылевых частиц в гармонической ловушке</p>
+            </div>
+
+            <div style="text-align: center;">
+                <div style="width: 100%; height: 320px; background: #fff; border: 1px solid #eee; display: flex; align-items: center; justify-content: center; border-radius: 8px; overflow: hidden;">
+                    <img src="ani.gif" alt="Анимация" style="max-width: 98%; max-height: 98%; object-fit: contain;">
+                </div>
+                <p style="font-size: 0.8em; color: #5a5a5a; margin-top: 10px;">Динамика цепочки пылевых частиц</p>
+            </div>
+
+        </div>
+
+        <div class="slide-number">6</div>
+    </div>
+
+    <div class="slide" style="height: 600px; display: flex; flex-direction: column; overflow: hidden;">
+        <h2 style="margin: 0; padding: 10px 0; font-size: 1.5em; flex-shrink: 0;">
+            Квазиодномерная цепочка пылевых частиц. Результаты
+        </h2>
+        
+        <div style="flex-grow: 1; width: 100%; min-height: 0; margin-bottom: 20px;">
+            <iframe src="chain_interactive.html" 
+                    width="100%" 
+                    height="100%" 
+                    frameborder="0" 
+                    scrolling="no" 
+                    style="display: block; border: 1px solid #f0f0f0;">
+            </iframe>
+        </div>
+
+        <div class="slide-number">7</div>
+    </div>
+
+    <div class="slide">
+        <h2>Топоэлектрическая сеть</h2>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-top: 40px;">
+            
+            <div style="flex: 0.35; text-align: center;">
+                <div class="boxed" style="display: inline-block; padding: 10px; font-size: 0.85em; background: #fafafa;">
+                    \[ \tilde{\mathbf{C}}\frac{d^2\tilde{\mathbf{I}}}{d\tau^2} + \frac{1}{Q}\frac{d\tilde{\mathbf{I}}}{d\tau} + \tilde{\mathbf{I}} = \sqrt{\frac{2kT}{Q}} \boldsymbol{\eta}(\tau) \]
+                </div>
+                <p style="font-size: 0.8em; color: #7f8c8d; margin-top: 10px;">Обезразмеренное уравнение динамики</p>
+            </div>
+
+            <div style="flex: 0.65; text-align: center;">
+                <div style="width: 100%; height: 380px; background: #fff; display: flex; align-items: center; justify-content: center;">
+                    <img src="topscheme.svg" alt="Схема цепи" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <p style="font-size: 0.85em; color: #5a5a5a; margin-top: 5px; font-weight: 500;">
+                    Схема топоэлектрической цепочки с невзаимными взаимодействиями
+                </p>
+            </div>
+
+        </div>
+
+        <div class="slide-number">8</div>
+    </div>
+
+    <div class="slide" style="display: flex; flex-direction: column; height: 600px; overflow: hidden;">
+        <h2 style="margin-bottom: 10px;">Топоэлектрическая сеть. Результаты.</h2>
+
+        <div style="text-align: center; margin-bottom: 15px; flex-shrink: 0;">
+            <div class="boxed" style="display: inline-block; padding: 10px 25px; font-size: 0.95em; background: #fafafa;">
+                \[ Q_{\text{crit}} \approx \frac{\sqrt{3}}{\pi} N \sqrt{\frac{C (C + C_1 + C_2)}{C_1 C_2}} \]
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; flex-grow: 1; min-height: 0; margin-bottom: 10px;">
+            
+            <div style="display: flex; flex-direction: column; border: 1px solid #eee; border-radius: 4px;">
+                <iframe 
+                    src="interactive_Q_scan.html" 
+                    width="100%"
+                    height="100%" 
+                    frameborder="0" 
+                    scrolling="no" 
+                    style="display: block; flex-grow: 1;">
+                </iframe>
+                <p style="font-size: 0.75em; color: #7f8c8d; padding: 5px; margin: 0; background: #fdfdfd; border-top: 1px solid #eee; text-align: center;">
+                    Распределение дисперсий токов в зависимости от добротности
+                </p>
+            </div>
+
+            <div style="display: flex; flex-direction: column; border: 1px solid #eee; border-radius: 4px;">
+                <iframe 
+                    src="chain_Q_Q.html" 
+                    width="100%" 
+                    height="100%" 
+                    frameborder="0" 
+                    scrolling="no" 
+                    style="display: block; flex-grow: 1;">
+                </iframe>
+                <p style="font-size: 0.75em; color: #7f8c8d; padding: 5px; margin: 0; background: #fdfdfd; border-top: 1px solid #eee; text-align: center;">
+                    Сравнение предсказанной и истинной критической добротности
+                </p>
+            </div>
+
+        </div>
+
+        <div class="slide-number">9</div>
+    </div>
+
+    <div class="slide">
+        <h2>Выводы</h2>
+        <ul>
+            <li>Установлен закон распределения автокорреляторов вблизи исключительных точек, связывающий амплитуду флуктуаций с геометрией сливающихся собственных векторов.</li>
+            <li>Я помню что мы обсуждали что-то ещё, но я забыл записать</li>
+        </ul>
+        <div class="slide-number">10</div>
+    </div>
+
+</body>
+</html>
