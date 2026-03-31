@@ -42,7 +42,7 @@
     </div>
 
     <div class="slide">
-        <h2>Модель системы</h2>
+        <h2>Модель системы и актуальность</h2>
         
         <div class="boxed" style="text-align: center;">
             \[ \mathbf{A} \frac{d^2\mathbf{q}}{dt^2} + \gamma \frac{d\mathbf{q}}{dt} + \mathbf{C} \mathbf{q} = \boldsymbol{\eta}(t), \qquad \mathbf{A} \neq \mathbf{A}^T \text{ или/и } \mathbf{C} \neq \mathbf{C}^T \]
@@ -99,7 +99,7 @@
                     <img src="temp_avg.png" alt="Распределение температуры" style="max-width: 98%; max-height: 98%; object-fit: contain;">
                 </div>
                 <p style="font-size: 0.65em; color: #7f8c8d; margin-top: 8px; line-height: 1.2;">
-                    Распределение температуры \(\ T \)
+                    Распределение среднекинетической энергии \(\ T \)
                 </p>
             </div>
 
@@ -108,6 +108,7 @@
                     <img src="dusty_experiment.gif" alt="Анимация" style="max-width: 98%; max-height: 98%; object-fit: contain;">
                 </div>
                 <p style="font-size: 0.65em; color: #7f8c8d; margin-top: 8px; line-height: 1.2;">
+                    Экспериментально наблюдаемый неравномерный нагрев монослоя из пылевой плазмы.
                     [5] Hariprasad M. G. et al. Self-sustained non-equilibrium coexistence in complex plasma
                 </p>
             </div>
@@ -136,7 +137,7 @@
     </div>
 
     <div class="slide">
-        <h2>Основной результат</h2>
+        <h2>Аналитический вид распределения автокорреляторов наблюдаемых величин вблизи особых точек</h2>
 
         <div style="text-align: center; margin-top: 20px;">
             <div class="boxed" style="display: inline-block; padding: 15px 30px; background: #fcfcfc;">
@@ -172,41 +173,65 @@
         <div class="slide-number">5</div>
     </div>
     
-    <div class="slide">
-        <h2>Квазиодномерная цепочка пылевых частиц</h2>
+<div class="slide">
+    <h2>Неоднородное распределение кинетической энергии в упорядоченных структурах пылевых частиц</h2>
 
-        <div style="text-align: center; margin-top: 10px; margin-bottom: 15px;">
-            <div class="boxed" style="display: inline-block; padding: 10px 25px; font-size: 0.9em; background: #fafafa; border: 1px solid #ddd; border-radius: 5px;">
-                \[ \mathbf{M} \frac{d^2 \mathbf{x}}{dt^2} + \gamma \frac{d \mathbf{x}}{dt} + \mathbf{A} \mathbf{x} = \sqrt{2kT \gamma} \boldsymbol{\eta} (t) \]
-            </div>
+    <div style="text-align: center; margin-top: 10px; margin-bottom: 15px;">
+        <div class="boxed" style="display: inline-block; padding: 10px 25px; font-size: 0.9em; background: #fafafa; border: 1px solid #ddd; border-radius: 5px;">
+            $$ \mathbf{M} \frac{d^2 \mathbf{x}}{dt^2} + \gamma \frac{d \mathbf{x}}{dt} + \mathbf{A} \mathbf{x} = \sqrt{2kT \gamma} \boldsymbol{\eta} (t) $$
         </div>
-
-        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 20px; align-items: start;">
-            
-            <div style="text-align: center;">
-                <div style="width: 100%; height: 340px; background: #fff; border: 1px solid #eee; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                    <img src="ion_trap_scheme.svg" 
-                        alt="Схема ловушки" 
-                        style="max-width: 95%; max-height: 95%; object-fit: contain;">
-                </div>
-                <p style="font-size: 0.8em; color: #5a5a5a; margin-top: 10px;">Цепочка пылевых частиц в гармонической ловушке</p>
-            </div>
-
-            <div style="text-align: center;">
-                <div style="width: 100%; height: 340px; background: #fff; border: 1px solid #eee; display: flex; align-items: center; justify-content: center; border-radius: 8px; overflow: hidden;">
-                    <img src="ani.gif" alt="Анимация" style="max-width: 98%; max-height: 98%; object-fit: contain;">
-                </div>
-                <p style="font-size: 0.8em; color: #5a5a5a; margin-top: 10px;">Динамика цепочки пылевых частиц</p>
-            </div>
-
-        </div>
-
-        <div class="slide-number">6</div>
     </div>
+
+    <div style="display: grid; grid-template-columns: 1.0fr 1.0fr; gap: 20px; align-items: start;">
+        
+            <div style="text-align: center;">
+                <div style="width: 100%; height: 320px; background: #fff; border: 1px solid #eee; border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                    <img src="dusty_experiment.gif" alt="Анимация" style="max-width: 98%; max-height: 98%; object-fit: contain;">
+                </div>
+                <p style="font-size: 0.65em; color: #7f8c8d; margin-top: 8px; line-height: 1.2;">
+                    Экспериментально наблюдаемый неравномерный нагрев монослоя из пылевой плазмы.
+                    [5] Hariprasad M. G. et al. Self-sustained non-equilibrium coexistence in complex plasma
+                </p>
+            </div>
+
+        <div style="text-align: center;">
+            <div style="position: relative; width: 100%; height: 340px; background: #fff; border: 1px solid #eee; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                
+                <img src="ani.gif" alt="Анимация" style="
+                    position: absolute;
+                    top: 50%; /* Центрируем по вертикали */
+                    left: 50%; /* Центрируем по горизонтали */
+                    transform: translate(-50%, -50%); /* Коррекция для идеального центра */
+                    
+                    /* МАГИЯ ЗДЕСЬ: Сужаем гифку, чтобы она влезла в чашу */
+                    max-width: 80%; /* <--- БЫЛО 98% */
+                    max-height: 98%; 
+                    
+                    object-fit: contain;
+                    z-index: 1;
+                ">
+
+                <img src="ion_trap_scheme.svg" alt="Схема поверх" style="
+                    position: absolute;
+                    max-width: 95%; 
+                    max-height: 95%; 
+                    object-fit: contain;
+                    z-index: 2;
+                    pointer-events: none;
+                    mix-blend-mode: multiply; /* Оставляем, чтобы фон SVG не мешал */
+                ">
+            </div>
+            <p style="font-size: 0.8em; color: #5a5a5a; margin-top: 10px;">Динамика цепочки пылевых частиц</p>
+        </div>
+
+    </div>
+
+    <div class="slide-number">6</div>
+</div>
 
     <div class="slide" style="height: 600px; display: flex; flex-direction: column; overflow: hidden;">
         <h2 style="margin: 0; padding: 10px 0; font-size: 1.5em; flex-shrink: 0;">
-            Квазиодномерная цепочка пылевых частиц. Результаты
+            Неоднородное распределение кинетической энергии в упорядоченных структурах пылевых частиц. Результаты
         </h2>
         
         <div style="flex-grow: 1; width: 100%; min-height: 0; margin-bottom: 20px;">
@@ -294,9 +319,10 @@
 
     <div class="slide">
         <h2>Выводы</h2>
-        <ul>
-            <li>Установлен закон распределения автокорреляторов вблизи исключительных точек, связывающий амплитуду флуктуаций с геометрией сливающихся собственных векторов.</li>
-            <li>Я помню что мы обсуждали что-то ещё, но я забыл записать</li>
+        <ul style="font-size: 1.25em; line-height: 1.4;">
+            <li style="margin-bottom: 0.8em;">Установлен закон распределения автокорреляторов вблизи исключительных точек, связывающий амплитуду флуктуаций с формой сливающихся собственных векторов.</li>
+            <li style="margin-bottom: 0.8em;">Получено объяснение неравномерного распределения кинетической энергии в цепочке пылевых частиц.</li>
+            <li>Получено объяснение экспоненциального усиления амплитуды дисперсий токов в топоэлектрической цепочке.</li>
         </ul>
         <div class="slide-number">10</div>
     </div>
